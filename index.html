@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="/testbook.png" alt="Quiz Book">
+        </div>
+        <div class="heading">Hello, User!</div>
+
+        <div class="form">
+            <p class="pass1">Enter your name to continue the Quiz</p>
+
+            <form action="" onsubmit="return false;">
+                <input type="text" id="username" placeholder="Enter your name" class="responsive-input">
+                <button type="submit" class="btm" id="btn">Enter</button>
+            </form>
+            <p class="pass">You'll have 10 seconds to answer each question.</p>
+                <div class="underline"></div>
+        </div>
+
+        <div class="head">Select Category</div>
+
+        <div class="buttons">
+            <input type="button" value="HTML" class="btn" id="quizButton" disabled>
+            <input type="button" value="CSS" class="btn" id="quizButton2" disabled>
+            <input type="button" value="Javascript" class="btn" id="quizButton3">
+            <input type="button" value="Java" class="btn" id="quizButton4" disabled>
+        </div>
+    </div>
+</body>
+
+<script>
+
+
+    let username = document.querySelector("#username");
+    let enter = document.querySelector("#btn");
+    let buttons = document.querySelectorAll(".btn");
+
+    // Enable category buttons only if the user enters their name
+    enter.addEventListener("click", () => {
+        let nameValue = username.value.trim();
+
+        if (nameValue) {
+            console.log("Congrats! You are eligible!");
+            localStorage.setItem("username", nameValue);
+            buttons.forEach(button => button.disabled = false);
+        } else {
+            alert("Please enter your name");
+        }
+    });
+
+    // Event Listeners to store selected category and redirect
+    document.querySelector("#quizButton").addEventListener("click", () => {
+        localStorage.setItem("quizType", "html");
+        window.location.href = "quiz.html";
+    });
+
+    document.querySelector("#quizButton2").addEventListener("click", () => {
+        localStorage.setItem("quizType", "css");
+        window.location.href = "quiz.html";
+    });
+
+    document.querySelector("#quizButton3").addEventListener("click", () => {
+        localStorage.setItem("quizType", "geometry");
+        window.location.href = "quiz.html";
+    });
+
+    document.querySelector("#quizButton4").addEventListener("click", () => {
+    localStorage.setItem("quizType", "java");
+    window.location.href = "quiz.html";
+});
+
+    
+</script>
+
+</html>

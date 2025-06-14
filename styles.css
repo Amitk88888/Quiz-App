@@ -1,0 +1,261 @@
+/* CSS (styles.css) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    background: #e0f7ff; /* Skyblue background */
+    border: 3px solid #89CFF0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+p {
+    font-size: 24px;
+    color: #007BFF; /* Deep blue text */
+    font-weight: bold;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+button:active {
+    background-color: #003d80;
+    transform: translateY(0px);
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.next_btn {
+    margin-top: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px; /* Prevent layout issues on smaller screens */
+}
+
+.container {
+    width: 90%;
+    max-width: 666px;
+    border: 2px groove rgba(30, 69, 6, 0.313);
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+    background: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.image img {
+    width: 100px;
+    height: 100px;
+}
+
+.heading {
+    font-size: 50px;
+    color: rgb(89, 89, 235);
+}
+
+.head {
+    font-size: 28px;
+    font-weight: bold;
+    color: skyblue;
+    margin-bottom: 10px;
+}
+
+.form .pass1 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.responsive-input {
+    width: 90%;
+    max-width: 472px;
+    min-height: 28px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form .btm {
+    width: 80px;
+    min-height: 35px;
+    background-color: rgb(122, 122, 210);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form .btm:hover {
+    background-color: rgb(89, 89, 235);
+}
+
+.pass {
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+.underline {
+    border: 1px solid gray;
+    width: 80%;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two buttons per row */
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(89, 89, 235);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%; /* Ensure buttons fit inside grid */
+}
+
+.btn:hover {
+    background-color: rgb(122, 122, 210);
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    background-color: rgb(75, 75, 200);
+    transform: translateY(0px);
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #87CEEB; /* Sky blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Result Container */
+.result-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Headings */
+h2 {
+    color: #005f99;
+    margin-bottom: 15px;
+}
+
+/* Result Info */
+p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+strong {
+    color: #005f99;
+}
+
+/* Try Again Button */
+button {
+    background-color: #005f99;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #003f66;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+

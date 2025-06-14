@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="result-container">
+        <h2>Quiz Results</h2>
+        <p><strong>Candidate Name:</strong> <span id="candidateName"></span></p>
+        <p><strong>Total Questions:</strong> <span id="totalQuestions"></span></p>
+        <p><strong>Attempted:</strong> <span id="attempted"></span></p>
+        <p><strong>Correct Answers:</strong> <span id="correct"></span></p>
+        <p><strong>Wrong Answers:</strong> <span id="wrong"></span></p>
+        <p><strong>Score Percentage:</strong> <span id="percentage"></span>%</p>
+        <p><strong>Total Time Taken:</strong> <span id="totalTime"></span> seconds</p>
+        <a href="index.html"><button>Try Again</button></a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const resultData = JSON.parse(localStorage.getItem("quizResult"));
+
+            if (resultData) {
+                document.getElementById("candidateName").innerText = resultData.candidateName;
+                document.getElementById("totalQuestions").innerText = resultData.totalQuestions;
+                document.getElementById("attempted").innerText = resultData.attempted;
+                document.getElementById("correct").innerText = resultData.correct;
+                document.getElementById("wrong").innerText = resultData.wrong;
+                document.getElementById("percentage").innerText = resultData.percentage;
+                document.getElementById("totalTime").innerText = resultData.totalTime;
+            } else {
+                document.querySelector(".result-container").innerHTML = "<h2>No result found. Start a quiz first!</h2>";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
